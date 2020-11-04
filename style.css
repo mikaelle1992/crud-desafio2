@@ -1,0 +1,163 @@
+* {
+    font-family: arial;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #229dee;
+}
+
+header {
+    color: white;
+    background-color: #504d4d;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    padding: 15px;
+    width: 990px;
+    justify-content: space-between;
+  
+}
+
+.containerLogin {
+    display: flex;
+    justify-content: center;
+    line-height: 100px;
+}
+
+.titulo {
+    font-size: 50px;
+ height:60px;
+  
+}
+
+
+
+.formularioLogin {
+    font-size: 25px;
+    margin: 10px;
+    padding: 10px;
+    margin-top: 5px;
+    width: 400px;
+    background-color: white;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    font-size: 14px;
+}
+
+input {
+    outline-color: rgb(130, 147, 214);
+    padding: 5px;
+}
+
+input[type=submit] {
+    background: #006699;
+    color: #ffffff;
+    height: 32px;
+    width: 90px;
+    font-size: 17px;
+}
+.formul{
+  display: flex;
+justify-content: center;
+}
+.formulario {
+   
+    padding: 12px;
+    margin-top: 5px;
+    width: 400px;
+    height: auto;
+    background-color: white;
+}
+
+.cadastro {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+}
+
+.cadastro a {
+    color: rgb(53, 50, 50);
+}
+
+.tabela {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    background-color: white;
+}
+
+.barra {
+    display: flex;
+    justify-content: center;
+
+}
+.form{
+    display: flex;
+    justify-content: space-between;
+    width:1087px;
+}
+
+input {
+    margin-bottom: 7px;
+}
+
+td,
+th {
+    border: 2px solid #686666;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    
+}
+
+
+nav ul,
+nav li {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #727272;
+}
+
+nav .active a,
+nav a:hover {
+    background-color: #39aae1;
+    color: white;
+}
