@@ -20,7 +20,6 @@ header {
     padding: 15px;
     width: 990px;
     justify-content: space-between;
-  
 }
 
 .containerLogin {
@@ -31,11 +30,8 @@ header {
 
 .titulo {
     font-size: 50px;
- height:60px;
-  
+    height: 60px;
 }
-
-
 
 .formularioLogin {
     font-size: 25px;
@@ -67,12 +63,13 @@ input[type=submit] {
     width: 90px;
     font-size: 17px;
 }
-.formul{
-  display: flex;
-justify-content: center;
+
+.formul {
+    display: flex;
+    justify-content: center;
 }
+
 .formulario {
-   
     padding: 12px;
     margin-top: 5px;
     width: 400px;
@@ -107,12 +104,12 @@ table {
 .barra {
     display: flex;
     justify-content: center;
-
 }
-.form{
+
+.form {
     display: flex;
     justify-content: space-between;
-    width:1087px;
+    width: 1087px;
 }
 
 input {
@@ -133,9 +130,7 @@ tr:nth-child(even) {
 .menu {
     display: flex;
     align-items: center;
-    
 }
-
 
 nav ul,
 nav li {
@@ -160,4 +155,8 @@ nav .active a,
 nav a:hover {
     background-color: #39aae1;
     color: white;
+}
+
+.data {
+    font-size: 12px;
 }

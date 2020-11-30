@@ -16,19 +16,20 @@ session_start();
 
 <body>
     <header>
-        <div class="container"> 
-         <div class="titulo">
+        <div class="container">
+            <div class="titulo">
                 Listagem
-         </div>
-        <div class="menu">
-             <nav>
+            </div>
+            <div class="menu">
+                <nav>
                     <ul>
                         <li class="active"><a href="">HOME</a></li>
                         <li><a href="inserir.php">ADD</a></li>
+                        <li><a href="comentario.php">COMMENTS</a></li>
 
                     </ul>
                 </nav>
-               
+
             </div>
 
         </div>
@@ -36,23 +37,23 @@ session_start();
 
     <section>
         <div class="barra">
-            <div class = "form">
-        
-        <form method="GET">
-                <select name="ordem" onchange="this.form.submit()">
-                    <option selected="selected">Ordem</option>
-                    <option value="name" > Pelo nome </option>
-                    <option value="birth_date">Por DatNasc </option>
-                </select><br/><br/>
-        </form>
-       
-        <form method="POST" action="pesquisar.php">
-                  
-                  <input type="text" name  = "busca" placeholder="Buscar">
-                  <input type="submit" value="Buscar">
-         </form>
-</div>
-         
+            <div class="form">
+
+                <form method="GET">
+                    <select name="ordem" onchange="this.form.submit()">
+                        <option selected="selected">Ordem</option>
+                        <option value="name"> Pelo nome </option>
+                        <option value="birth_date">Por DatNasc </option>
+                    </select><br /><br />
+                </form>
+
+                <form method="POST" action="pesquisar.php">
+
+                    <input type="text" name="busca" placeholder="Buscar">
+                    <input type="submit" value="Buscar">
+                </form>
+            </div>
+
         </div>
         <div class="tabela">
             <table>
@@ -68,18 +69,18 @@ session_start();
                     <th>Ações</th>
                 </tr>
                 <?php
-              
-               if (isset($_GET['ordem']) && empty($_GET['ordem']) == false) {
+
+                if (isset($_GET['ordem']) && empty($_GET['ordem']) == false) {
                     $ordem = addslashes($_GET['ordem']);
-                      
-                    $sql = "SELECT * FROM users ORDER BY ".$ordem; 
-                } else{
-                    $ordem= "";
+
+                    $sql = "SELECT * FROM users ORDER BY " . $ordem;
+                } else {
+                    $ordem = "";
                     $sql = "SELECT * FROM users";
-             }
+                }
 
                 $sql = $pdo->query($sql);
-               if ($sql->rowCount() > 0) {
+                if ($sql->rowCount() > 0) {
                     //echo "Esta tudo bem!";
                     foreach ($sql->fetchAll() as $usuario) {
                         echo '<tr>';
@@ -91,16 +92,19 @@ session_start();
                         echo '<td>' . $usuario['city'] . '</td>';
                         echo '<td>' . $usuario['uf'] . '</td>';
                         echo '<td>' . $usuario['nationatity'] . '</td>';
-                        echo '<td><a href ="detalhes.php?id=' . $usuario['id'] .'"><img src="imgs/detalhes.png" width="30" height="30" ></a> - <a href ="excluir.php?id=' . $usuario['id'] . '"><img src="imgs/download.jpg" width="30" height="30" ></a> - <a href ="editar.php?id=' . $usuario['id'] . '"><img src="imgs/editar.jpg" width="30" height="30" ></a></td>';
+                        echo '<td><a href ="detalhes.php?id=' . $usuario['id'] . '"><img src="imgs/detalhes.png" width="30" height="30" ></a> - <a href ="excluir.php?id=' . $usuario['id'] . '"><img src="imgs/download.jpg" width="30" height="30" ></a> - <a href ="editar.php?id=' . $usuario['id'] . '"><img src="imgs/editar.jpg" width="30" height="30" ></a></td>';
 
                         echo '</tr>';
                     }
                 }
                 ?>
             </table>
+         
         </div>
-
+       
+         
     </section>
+
 
 </body>
 
